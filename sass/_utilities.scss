@@ -1,0 +1,62 @@
+.active {
+  color: $bright-blue;
+}
+
+.input-email {
+  border: none;
+  border: 1px solid $very-dark-blue;
+  padding: 0.75rem 0;
+  padding-left: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: red;
+  }
+}
+
+button.btn {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  background-color: $bright-blue;
+  color: $light-grayish-blue;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.75rem 0;
+}
+
+span {
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: bubbleBtn 1s linear infinite;
+}
+
+::placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+@keyframes bubbleBtn {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in-out;
+
+  @media screen and (max-width: 64em) {
+    font-size: 87.5%;
+  }
+  @media screen and (max-width: 48em) {
+    font-size: 75%;
+  }
+  @media screen and (max-width: 25em) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-top: 1rem;
+  color: $very-dark-blue;
+}
+
+.wrapper {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 43.75em) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  color: $light-grayish-blue;
+}
+.attribution a {
+  color: $bright-blue;
+}
+
+.main {
+  padding-top: 10rem;
+  background-image: url(../images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  @media screen and (max-width: 43.75em) {
+    padding-top: 3rem;
+    background-image: url(../images/bg-curve-mobile.svg);
+  }
+}
+
+.footer {
+  background-color: $very-dark-blue;
+  padding: 4rem;
+}
+
+[class$="-content"] {
+  flex: 0 0 50%;
+
+  @media screen and (max-width: 43.75em) {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
+
+.copyright {
+  background-color: $very-dark-blue;
+}
